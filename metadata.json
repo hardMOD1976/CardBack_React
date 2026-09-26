@@ -1,0 +1,6 @@
+{
+  "name": "Cardback",
+  "description": "The definitive platform and authoritative catalogue archive for action figure collectors.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

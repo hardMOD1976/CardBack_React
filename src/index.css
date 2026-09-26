@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   WCAG 2.1 AA ACCESSIBILITY & FOCUS STYLES
+   Ensures 100% visible, high-contrast focus indicators for all interactive elements
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid #f59e0b !important;
+  outline-offset: 2px !important;
+}
+
+[data-skin="vintage-kenner"] :focus-visible {
+  outline: 2px solid #38bdf8 !important;
+  outline-offset: 2px !important;
+}
+
+[data-skin="retro-neon"] :focus-visible {
+  outline: 2px solid #06b6d4 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced motion preference compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen reader only utility with focus override */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
+
+/* ==========================================================================
+   SKIN 1: MODERN ARCHIVE (High precision, sober, museum grade)
+   ========================================================================== */
+[data-skin="modern"] {
+  --skin-primary: #f59e0b;
+  --skin-accent: #d97706;
+  --skin-border: #334155;
+}
+
+/* ==========================================================================
+   SKIN 2: 1978 KENNER CARDBACK (Vintage 80s Toy Packaging & Silver Racetrack)
+   Directly evokes the iconic Kenner Star Wars / Vintage Toy cardback packaging:
+   - Deep vintage space blue
+   - Iconic double-line "racetrack" chrome / silver borders
+   - Retro Kenner collector badges and warm orange accents
+   ========================================================================== */
+[data-skin="vintage-kenner"] {
+  --skin-primary: #38bdf8;
+  --skin-accent: #f97316;
+  --skin-border: #94a3b8;
+}
+
+[data-skin="vintage-kenner"].dark,
+.dark[data-skin="vintage-kenner"],
+[data-skin="vintage-kenner"] .dark {
+  background-color: #060e1d !important;
+}
+
+/* Kenner Double Racetrack border - the signature 80s blister card style */
+.kenner-racetrack-box {
+  position: relative;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9), 0 0 0 3.5px rgba(203, 213, 225, 0.35);
+}
+
+[data-skin="vintage-kenner"] .kenner-racetrack-active {
+  position: relative;
+  border: 1.5px solid #94a3b8;
+  box-shadow: 0 0 0 2px rgba(6, 14, 29, 0.95), 0 0 0 3.5px #cbd5e1;
+}
+
+/* 80s Kenner Cardback Badge style */
+.kenner-proof-badge {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle vintage cardback texture backdrop */
+[data-skin="vintage-kenner"] main {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.04) 0%, transparent 65%),
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 48px;
+}
+
+/* ==========================================================================
+   SKIN 3: NEON 80S SYNTHWAVE (Subtle retro-futuristic grid & electric glow)
+   Sober modern layout elevated by iconic 1980s synth grid lines and neon cyan
+   ========================================================================== */
+[data-skin="retro-neon"] {
+  --skin-primary: #06b6d4;
+  --skin-accent: #ec4899;
+  --skin-border: #475569;
+}
+
+[data-skin="retro-neon"].dark,
+.dark[data-skin="retro-neon"],
+[data-skin="retro-neon"] .dark {
+  background-color: #070814 !important;
+}
+
+/* 80s Synthwave perspective grid background */
+[data-skin="retro-neon"] main {
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.08) 0%, transparent 60%),
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  background-position: center top;
+}
+
+/* Glowing edge for cards in retro-neon skin */
+[data-skin="retro-neon"] .card-elevated-hover:hover {
+  box-shadow: 0 0 16px -2px rgba(6, 182, 212, 0.35), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  border-color: rgba(6, 182, 212, 0.6) !important;
+}
+
+/* ==========================================================================
+   AA CONTRAST ENHANCEMENTS
+   Ensures text meets or exceeds 4.5:1 on dark and light backgrounds
+   ========================================================================== */
+.text-high-contrast {
+  color: #0f172a;
+}
+.dark .text-high-contrast {
+  color: #f8fafc;
+}
+
+.text-muted-contrast {
+  color: #475569; /* AA compliant >= 4.5:1 on light */
+}
+.dark .text-muted-contrast {
+  color: #cbd5e1; /* AA compliant >= 7:1 on dark */
+}

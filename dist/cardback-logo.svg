@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 85" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&amp;display=swap');
+      .cb-text {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 900;
+        font-size: 52px;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+
+  <!-- 'car' -->
+  <text x="10" y="68" fill="#000B76" class="cb-text">car</text>
+
+  <!-- Central Blister Card -->
+  <g transform="translate(108, 12)">
+    <rect x="0" y="0" width="86" height="66" rx="8" fill="#000B76" />
+    
+    <!-- White Euro-slot punch hole -->
+    <path d="M 28 14 C 25.5 14 23.5 12 23.5 9.5 C 23.5 7 25.5 5 28 5 L 37.5 5 C 38 5 38.5 4.5 38.5 4 C 38.5 3.5 39 3 39.5 3 L 46.5 3 C 47 3 47.5 3.5 47.5 4 C 47.5 4.5 48 5 48.5 5 L 58 5 C 60.5 5 62.5 7 62.5 9.5 C 62.5 12 60.5 14 58 14 Z" fill="#FFFFFF" />
+    
+    <!-- White 'db' inside card -->
+    <text x="10" y="56" fill="#FFFFFF" class="cb-text">db</text>
+  </g>
+
+  <!-- 'ack' -->
+  <text x="202" y="68" fill="#000B76" class="cb-text">ack</text>
+</svg>

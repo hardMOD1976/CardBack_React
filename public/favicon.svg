@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 95" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&amp;display=swap');
+      .cb-mark-text {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 900;
+        font-size: 58px;
+        letter-spacing: -0.03em;
+      }
+    </style>
+  </defs>
+
+  <!-- Floating Euro-slot Punch Hole in Blue/Indigo -->
+  <path d="M 33 22 C 30 22 27.5 19.5 27.5 16.5 C 27.5 13.5 30 11 33 11 L 43.5 11 C 44 11 44.5 10.5 44.5 10 C 44.5 9.5 45 9 45.5 9 L 54.5 9 C 55 9 55.5 9.5 55.5 10 C 55.5 10.5 56 11 56.5 11 L 67 11 C 70 11 72.5 13.5 72.5 16.5 C 72.5 19.5 70 22 67 22 Z" fill="#4739F5" />
+
+  <!-- 'db' in matching Blue/Indigo -->
+  <text x="14" y="80" fill="#4739F5" class="cb-mark-text">db</text>
+</svg>
